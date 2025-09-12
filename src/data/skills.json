@@ -1,0 +1,94 @@
+[
+  {
+    "title": "C",
+    "imageSrc": "skills/c.png"
+  },
+  {
+    "title": "C++",
+    "imageSrc": "skills/cpp.png"
+  },
+  {
+    "title": "Java",
+    "imageSrc": "skills/java.png"
+  },
+  {
+    "title": "Python",
+    "imageSrc": "skills/python.png"
+  },
+  {
+    "title": "JavaScript",
+    "imageSrc": "skills/javascript.png"
+  },
+  {
+    "title": "MERN",
+    "imageSrc": "skills/mern.png"
+  },
+  {
+    "title": "FireBase",
+    "imageSrc": "skills/firebase.png"
+  },
+  {
+    "title": "HTML",
+    "imageSrc": "skills/html.png"
+  },
+  {
+    "title": "CSS",
+    "imageSrc": "skills/css.png"
+  },
+  {
+    "title": "Node Js",
+    "imageSrc": "skills/nodejs.png"
+  },
+  {
+    "title": "Express Js",
+    "imageSrc": "skills/expressjs.png"
+  },
+  {
+    "title": "React Js",
+    "imageSrc": "skills/react.png"
+  },
+  {
+    "title": "Tailwind",
+    "imageSrc": "skills/tailwindcss.png"
+  },
+  {
+    "title": "Bootstrap",
+    "imageSrc": "skills/boot.png"
+  },
+  {
+    "title": "MongoDB",
+    "imageSrc": "skills/mongodb.png"
+  },
+  {
+    "title": "Microsoft SQL",
+    "imageSrc": "skills/sql.png"
+  },
+  {
+    "title": "MySql",
+    "imageSrc": "skills/mysql.png"
+  },
+  {
+    "title": "DSA",
+    "imageSrc": "skills/dsa.png"
+  },
+  {
+    "title": "Chat Gpt",
+    "imageSrc": "skills/chatgpt.png"
+  },
+  {
+    "title": "Flutter",
+    "imageSrc": "skills/flutter.png"
+  },
+  {
+    "title": "Dart",
+    "imageSrc": "skills/dart.png"
+  },
+  {
+    "title": "Kotlin",
+    "imageSrc": "skills/kotlin.png"
+  },
+  {
+    "title": "API Keys",
+    "imageSrc": "skills/api.png"
+  }
+]

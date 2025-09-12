@@ -1,0 +1,486 @@
+@import "../../vars.css";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #576cbc 0%, #132a53 100%);
+  box-shadow: 0 16px 14px 0 #04152d;
+  padding: 18px 24px;
+  max-width: 100%;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.image {
+  margin-bottom: 26px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.descriptions {
+  margin-top: 6px;
+  margin-left: 25px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.description {
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.description::before {
+  content: '•';
+  color: var(--color-text);
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+.skills {
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+}
+
+.skill {
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 100px;
+  background: var(--color-dark);
+  padding: 2px 22px;
+}
+
+.links {
+  width: 100%;
+  margin-top: 26px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.note {
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .descriptions {
+    margin-left: 0;
+  }
+
+  .description {
+    padding-left: 25px;
+    position: relative;
+  }
+
+  .description::before {
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .description {
+    padding-left: 20px;
+  }
+
+  .description::before {
+    top: 1px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills {
+    margin-left: 0;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .skill {
+    font-size: 15px;
+    padding: 5px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills {
+    gap: 6px;
+  }
+
+  .skill {
+    font-size: 14px;
+    padding: 4px 17px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .skills {
+    gap: 5px;
+  }
+
+  .skill {
+    font-size: 14px;
+    padding: 4px 14px;
+  }
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.modalContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imageWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modalImage {
+  max-width: 70vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  object-fit: contain;
+  display: block;
+}
+
+.currentImage {
+  position: relative;
+  z-index: 2;
+}
+
+.nextImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  margin: auto;
+}
+
+/* Smooth fade transitions */
+.fadeIn {
+  opacity: 1;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Arrow Navigation - Outside the image */
+.navButton {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.navButton:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.navButton:active {
+  transform: scale(0.95);
+}
+
+.closeButton {
+  position: absolute;
+  top: -50px;
+  right: -10px;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.closeButton:active {
+  transform: scale(0.95);
+}
+
+.closeButton svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.5;
+}
+
+.imageCounter {
+  margin-top: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Button Styles */
+.link, .imageButton {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 100px;
+  padding: 8px 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.link {
+  background: var(--color-primary);
+}
+
+.imageButton {
+  background: var(--color-secondary);
+}
+
+.link:hover, .imageButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.link:active, .imageButton:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsiveness for Modal */
+@media (max-width: 768px) {
+  .modalOverlay {
+    padding: 15px;
+  }
+  
+  .modalContent {
+    gap: 25px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .modalImage {
+    max-width: 85vw;
+    max-height: 70vh;
+  }
+  
+  .navButton {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  
+  .closeButton {
+    width: 36px;
+    height: 36px;
+    top: -40px;
+    right: -5px;
+  }
+  
+  .closeButton svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .imageCounter {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modalOverlay {
+    padding: 10px;
+  }
+  
+  .modalContent {
+    gap: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100vw;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    max-width: calc(100vw - 120px); /* Account for arrow buttons */
+  }
+  
+  .modalImage {
+    max-width: 100%;
+    max-height: 65vh;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Keep arrows on sides even on mobile */
+  .navButton {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0;
+  }
+  
+  .closeButton {
+    width: 32px;
+    height: 32px;
+    top: -35px;
+    right: 0;
+  }
+  
+  .closeButton svg {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .imageCounter {
+    font-size: 12px;
+    padding: 5px 12px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .modalContent {
+    gap: 10px;
+  }
+  
+  .imageContainer {
+    max-width: calc(100vw - 100px);
+  }
+  
+  .navButton {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  
+  .closeButton {
+    width: 30px;
+    height: 30px;
+    top: -30px;
+  }
+  
+  .closeButton svg {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .imageCounter {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .modalImage {
+    max-height: 80vh;
+    max-width: 70vw;
+  }
+  
+  .closeButton {
+    top: -30px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .modalContent {
+    gap: 8px;
+  }
+  
+  .imageContainer {
+    max-width: calc(100vw - 90px);
+  }
+  
+  .navButton {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  
+  .closeButton {
+    width: 28px;
+    height: 28px;
+    top: -25px;
+  }
+  
+  .closeButton svg {
+    width: 9px;
+    height: 9px;
+  }
+}

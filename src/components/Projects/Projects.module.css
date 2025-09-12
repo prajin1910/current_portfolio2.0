@@ -1,0 +1,247 @@
+@import "../../vars.css";
+
+.container {
+  margin-top: 76px;
+  color: var(--color-text);
+  margin-left: 10%;
+  margin-right: 10%;
+  scroll-margin-top: 100px; /* Helps with navbar scroll offset */
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+}
+
+.projects {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.additionalProjects {
+  width: 100%;
+  overflow: hidden;
+  transition: 
+    max-height 0.6s ease-out,
+    opacity 0.4s ease-out 0.1s,
+    margin 0.4s ease-out,
+    gap 0.4s ease-out;
+  /* Removed transform properties to prevent stacking context issues */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  /* Ensure this doesn't create a new stacking context */
+  position: relative;
+  z-index: 1;
+}
+
+.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+  gap: 0;
+  pointer-events: none;
+  /* Removed transform to prevent stacking context issues */
+}
+
+.expanded {
+  max-height: 5000px; /* Large enough for all projects */
+  opacity: 1;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  gap: 15px;
+  pointer-events: auto;
+  /* Removed transform to prevent stacking context issues */
+}
+
+/* Smooth rolling animation for individual project cards */
+.additionalProjects > * {
+  transition: 
+    opacity 0.4s ease,
+    transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  width: 100%;
+  max-width: 100%;
+}
+
+.collapsed > * {
+  transform: translateY(-10px); /* Reduced transform to minimize stacking context issues */
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.expanded > * {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.showMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 50px;
+}
+
+.showMoreButton {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-text);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(87, 108, 188, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.showMoreButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(87, 108, 188, 0.5);
+  background: linear-gradient(135deg, #6b7fc7, #1a3a5f);
+}
+
+.showMoreButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(87, 108, 188, 0.3);
+}
+
+/* Add a subtle ripple effect */
+.showMoreButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.showMoreButton:active::before {
+  width: 100px;
+  height: 100px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .projects {
+    gap: 8px; /* Reduced from 20px */
+  }
+
+  .additionalProjects {
+    gap: 8px; /* Reduced from 20px */
+  }
+
+  .expanded {
+    gap: 8px; /* Reduced from 20px */
+  }
+
+  .showMoreButton {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+  
+  .expanded {
+    max-height: 5000px; /* Reduced since gaps are smaller */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .projects {
+    gap: 7px; /* Reduced from 25px */
+  }
+
+  .additionalProjects {
+    gap: 7px; /* Reduced from 25px */
+  }
+
+  .expanded {
+    gap: 4px; /* Reduced from 25px */
+    max-height: 5000px; /* Adjusted for smaller gaps */
+  }
+
+  .showMoreButton {
+    padding: 8px 20px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .projects {
+    gap: 5px; /* Even smaller gap for very small screens */
+  }
+
+  .additionalProjects {
+    gap: 5px; /* Even smaller gap for very small screens */
+  }
+
+  .expanded {
+    gap: 5px; /* Even smaller gap for very small screens */
+    max-height: 5000px; /* Adjusted for smaller gaps */
+  }
+}
+
+/* Add this to ensure smooth loading of additional projects */
+.additionalProjects > * {
+  transition: 
+    transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28),
+    opacity 0.4s ease;
+  width: 100%;
+  max-width: 100%;
+}
+
+.collapsed > * {
+  transform: translateY(-10px); /* Reduced to minimize stacking issues */
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.expanded > * {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: calc(0.1s * var(--i));
+}

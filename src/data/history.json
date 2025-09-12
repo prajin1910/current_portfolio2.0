@@ -1,0 +1,58 @@
+[
+    {
+      "role": "Project Trainee",
+      "organisation": "NeuralRays AI",
+      "startDate": "June 2025 ",
+      "endDate": "September 2025",
+      "location" : "Chennai , Tamil Nadu",
+      "isCurrentlyWorking": true,
+      "experiences": ["Worked on AI-powered solutions by exploring the integration of machine learning models into real-world applications.",
+                "Strengthened skills in cloud deployment, version control (Git/GitHub), and Agile collaboration, preparing for large-scale software environments."
+                ],
+      "imageSrc": "history/neuralrays.png"
+    },
+    {
+      "role": "Project Engineer",
+      "organisation": "AtoS",
+      "startDate": "June 2025 ",
+      "endDate": "August 2025",
+      "location" : "Chennai , Tamil Nadu",
+      "experiences": ["Built and deployed responsive web applications using React, Angular, and Java Spring Boot, integrating frontend and backend seamlessly.",
+                "Gained hands-on experience in understanding how large-scale tech companies structure and manage production-ready websites. Contributed to live industrial projects under the mentorship of experienced professionals, aligning with Agile methodologies."
+                ],
+      "imageSrc": "history/atos.png"
+    },
+    {
+      "role": "AIML with Python Development Engineer",
+      "organisation": "NSIC Ltd.",
+      "startDate": "November 2023 ",
+      "endDate": "December 2023",
+      "location" : "Chennai , Tamil Nadu",
+      "experiences": ["Developed Machine Learning Models: Built and optimized machine learning models for tasks such as data analysis, prediction, and classification using Python.",
+                "Implemented Data Preprocessing Pipelines: Applied techniques for data cleaning, feature engineering, and handling missing data to improve model performance."
+                ],
+      "imageSrc": "history/nsic.png"
+    },
+    {
+      "role": "UI/UX Developer",
+      "organisation": "Big Bucks Innovation Private Limited",
+      "startDate": "April 2024",
+      "endDate": "June 2024",
+      "location" : "Chennai , Tamil Nadu",
+      "experiences": ["Conducted user research to understand needs and created intuitive designs focused on enhancing user experience and learnt many insigns about figma adobe canva etc.",
+                "Developed wireframes and interactive prototypes to visualize design concepts and streamline development with knowledge and Experience."
+              ],
+      "imageSrc": "history/bigbucks.png"
+    },
+    {
+      "role": "App Developer",
+      "organisation": "Prodigy Infotech",
+      "startDate": "December 2024 ",
+      "endDate": "January 2025",
+      "location" : "Chennai , Tamil Nadu",
+      "experiences": ["End-to-End App Development: Designed, developed, and deployed mobile applications, ensuring smooth performance and user-friendly interfaces."
+                ,"Performance Optimization: Enhanced app performance by optimizing code, reducing load times, and ensuring smooth user experiences across devices."
+              ],
+      "imageSrc": "history/prodigy.png"
+    }
+]

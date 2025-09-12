@@ -1,0 +1,103 @@
+[
+  {
+    "title": "Smart Food Management System",
+    "imageSrc": "projects/chatbuddies.JPG",
+    "description": ["Food Donation Platform: Developed a platform to connect hotels and NGOs, facilitating the donation of surplus food to reduce wastage.",
+                    "Real-Time Monitoring: Integrated a dashboard for tracking food requests, donations, and hotel food waste in real time.",
+                    "Community Impact: Enhanced food redistribution efforts, reducing food wastage and supporting underprivileged communities."
+                  ],
+    "skills": ["Embedded Js", "HTML", "Google Maps API","Mongo DB","Socket.io","Tailwind CSS","Javascript"],
+    "demo": "https://deepblue-xcxk.onrender.com",
+    "source": "#",
+    "note": "Note :- This is the inhouse software product of my company so I cannot share the source code."
+  },
+    {
+      "title": "Smart Waste Management System",
+      "imageSrc": "projects/chatbuddies.JPG",
+      "description": ["IoT-Driven Waste Monitoring: Integrated IoT sensors to track waste levels in real-time, optimizing collection routes and reducing overflow.",
+                      "Data-Driven Insights: Implemented data analytics to monitor waste patterns, enabling predictive analysis and better resource allocation.",
+                      "Sustainability Focus: Promoted environmental sustainability by streamlining waste management processes and reducing carbon emissions."
+                    ],
+      "skills": ["Node Js", "Express Js", "Embedded Js","Mongo DB","Socket.io","Tailwind CSS"],
+      "demo": "https://ecobin-nu.vercel.app/",
+      "source": "https://github.com/prajin1910/EcoBin"
+    },
+
+    {
+      "title": "TechBridge Innovations Private Limited",
+      "imageSrc": "projects/project.png",
+      "description": ["Designed and built intuitive user interfaces using HTML, CSS, and JavaScript to ensure a smooth user experience.",
+                      "API Development: Created and integrated RESTful APIs to enable seamless communication between the front end and back end.",
+                      "Focused on developing smart, tech-driven solutions that promote efficiency and innovation across different sectors."
+       ],
+      "skills": ["FireBase", "Embedded Js", "Bootstrap UI", "EmailJs","Tailwind CSS","MySql"],
+      "demo": "#",
+      "source": "#",
+      "note": "Note :- This is the inhouse software product of my current StartUp company so I cannot share the source code or any accessible link."
+    },
+
+    {
+
+      "title": "Bus Tracking System",
+      "imageSrc": "projects/chatbuddies.JPG",
+      "description": ["Real-Time Tracking: Developed a system to track buses in real time, enhancing reliability and reducing waiting times for students and staff.",
+                      "User-Friendly Interface: Designed an intuitive app interface for easy access to bus routes, arrival times, and notifications.",
+                      "Live Notifications: Implemented instant alerts to inform users of delays, route changes, or arrivals, ensuring smooth communication."
+                    ],
+      "skills": ["Flutter", "Dart", "Google Maps API","Mongo DB","Socket.io","Tailwind CSS","Kotlin"],
+      "demo": "https://trackme-indol.vercel.app/",
+      "source": "https://github.com/prajin1910/TrackMe"
+    },
+    {
+
+      "title": "AV Hall Booking System",
+      "imageSrc": "projects/chatbuddies.JPG",
+      "description": [
+                    "Smart Booking System: Developed an efficient AV hall reservation system allowing users to book slots seamlessly based on availability.",
+                    "Conflict-Free Scheduling: Integrated real-time calendar syncing to prevent double bookings and ensure smooth scheduling for all users.",
+                    "Email & SMS Alerts: Enabled automated notifications to confirm bookings, send reminders, or notify about changes instantly."
+                  ],
+      "skills": ["EmailJs", "HTML", "Boostrap","Tailwind CSS","Javascript","Tailwind CSS","Embedded Js"],
+      "demo": "https://av-hall-booking.onrender.com/",
+      "source": "https://github.com/prajin1910/TrackMe"
+    },
+    {
+      "title": "AI Chatbot",
+      "imageSrc": "projects/chatbuddies.JPG",
+      "description": [
+                    "Conversational AI: Developed an intelligent chatbot using ChatGPT's interface for seamless and human-like interactions.",
+                    "Multi-Model Integration: Combined DeepSeek for advanced logic and Claude for smart account management capabilities.",
+                    "Live Deployment: Hosted on a web platform with real-time responses, ensuring 24/7 accessibility and performance."
+                  ],
+      "skills": ["Deepseek", "OpenRouter", "Boostrap","Tailwind CSS","Javascript","Tailwind CSS","Embedded Js"],
+      "demo": "https://pk-ai.onrender.com/",
+      "source": "https://github.com/prajin1910/TrackMe"
+    },
+    {
+
+      "title": "Website Safety Checker",
+      "imageSrc": "projects/chatbuddies.JPG",
+      "description": [
+                  "URL Threat Analysis: Built a tool that scans and evaluates website URLs for potential phishing, malware, and other online threats.",
+                  "Real-Time Safety Scoring: Implemented a dynamic scoring system using threat intelligence APIs to classify websites as Safe, Warning, or Unsafe.",
+                  "User-Focused Interface: Designed a clean, responsive UI that allows users to quickly check any link's safety with instant results."
+                ],
+      "skills": ["Node Js", "Express Js", "Embedded Js","Mongo DB","Socket.io","Tailwind CSS"],
+      "demo": "https://website-checker-xi.vercel.app/",
+      "source": "https://github.com/prajin1910/TrackMe"
+    },
+    {
+
+      "title": "QR Code Generator",
+      "imageSrc": "projects/chatbuddies.JPG",
+      "description": [
+                  "Instant QR Generation: Developed a tool to generate QR codes in real time for URLs, text, contact info, and more.",
+                  "Customizable Output: Enabled users to download QR codes in multiple formats with options to customize size and color.",
+                  "Responsive Interface: Designed a user-friendly web layout accessible on both desktop and mobile devices for seamless use."
+                ],
+      "skills": ["Express Js", "Embedded Js","Html","Tailwind CSS","Bootstrap"],
+      "demo": "https://qr-code-generator-liart-omega.vercel.app/",
+      "source": "https://github.com/prajin1910/TrackMe"
+    }
+
+  ]

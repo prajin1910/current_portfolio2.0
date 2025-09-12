@@ -1,0 +1,31 @@
+[
+    {
+      "title": "VS Code",
+      "imageSrc": "tools/vscode.png"
+    },
+    {
+      "title": "Android Studio",
+      "imageSrc": "tools/android.png"
+    },
+    {
+      "title": "Render",
+      "imageSrc": "tools/render.png"
+    },
+    {
+      "title": "Versel",
+      "imageSrc": "tools/versel.png"
+    },
+    {
+      "title": "Spring Boot",
+      "imageSrc": "tools/springboot.png"
+    },
+    {
+      "title": "Git",
+      "imageSrc": "tools/git.png"
+    },
+    {
+        "title": "AWS Console",
+        "imageSrc": "tools/aws.png"
+     }
+  ]
+  
